@@ -7,5 +7,5 @@ urlpatterns = [
     # ex: /garage/
     path('', views.index,name='index'),
     # ex: /garage/5/
-    path('<int:question_id>/', views.description, name='description'),
+    path('<int:motorcycle_id>/', views.description, name='description'),
 ]
