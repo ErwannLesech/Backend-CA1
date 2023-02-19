@@ -1,0 +1,9 @@
+{% if latest_motorcycle_list %}
+    <ul>
+    {% for motorcycle in latest_motorcycle_list %}
+    <li><a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No motorcycle are available.</p>
+{% endif %}

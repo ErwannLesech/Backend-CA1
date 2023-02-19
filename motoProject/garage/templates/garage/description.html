@@ -1,0 +1,6 @@
+<h1>{{ motorcycle.motorcycle_text }}</h1>
+<ul>
+{% for description in motorcycle.description_set.all %}
+    <li>{{ description.description_text }}</li>
+{% endfor %}
+</ul>
