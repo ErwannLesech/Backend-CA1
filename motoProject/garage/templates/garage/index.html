@@ -1,3 +1,9 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'garage/style.css' %}">
+
+<h1>Garage</h1>
+
 {% if latest_motorcycle_list %}
     <ul>
     {% for motorcycle in latest_motorcycle_list %}

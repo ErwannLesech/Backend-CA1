@@ -1,5 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'garage/description.css' %}">
+
 <h1>{{ motorcycle.motorcycle_text }}</h1>
 <ul>
+
+<h2>description</h2>
+
 {% for description in motorcycle.description_set.all %}
     <li>{{ description.description_text }}</li>
 {% endfor %}

@@ -8,4 +8,6 @@ urlpatterns = [
     path('', views.index,name='index'),
     # ex: /garage/5/
     path('<int:motorcycle_id>/', views.description, name='description'),
+    # ex: /garage/create/
+    path('create/', views.create, name='create'),
 ]

@@ -1,0 +1,10 @@
+{% block title %} Create New Motorcycle {% endblock %}
+
+{% block content %}
+    <h1>Create New Motorcycle</h1>
+    <from method="post" action="/create/">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </from>
+{% endblock %}

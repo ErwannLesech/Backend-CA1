@@ -1,0 +1,19 @@
+li a {
+    color: green;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+}
+
+ul {
+    padding: 30px;
+    text-decoration: none;
+}
+
+body {
+    background: white url("img/garage.jpg") no-repeat;
+    background-size: 100%;
+}

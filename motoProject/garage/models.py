@@ -6,7 +6,6 @@ from django.utils import timezone
 
 class Motorcycle(models.Model):
     motorcycle_text = models.CharField(max_length=200)
-    
     pub_date = models.DateTimeField('date published')
     def __str__(self):
         return self.motorcycle_text

@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import get_object_or_404, render
 from .models import Motorcycle
+from .forms import CreateNewMotorcycle
 
 
 def index(request):
@@ -13,4 +14,12 @@ def index(request):
 def description(request, motorcycle_id):
     motorcycle = get_object_or_404(Motorcycle, pk=motorcycle_id)
     return render(request, 'garage/description.html', {'motorcycle': motorcycle})
+
+def create(request):    
+    if request.method == "POST":
+        form = CreateNewMotorcycle(request.POST)
+        
+    else:
+        form = CreateNewMotorcycle()
+    return render(request, 'garage/create.html', {'form': form})
 
