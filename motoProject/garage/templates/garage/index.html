@@ -1,15 +1,25 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'garage/style.css' %}">
+<title>Garage</title>
 
-<h1>Garage</h1>
+<body>
+    <div class="navbar">
+        <a href="/garage/">Home</a>
+        <a href="/garage/create/">Add Motorcycle</a>
+        <!-- <a href="/garage/remove/">Remove Motorcycle</a> -->
+    </div>
+    <main>
+        <h1>Garage</h1>
 
-{% if latest_motorcycle_list %}
-    <ul>
-    {% for motorcycle in latest_motorcycle_list %}
-    <li><a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No motorcycle are available.</p>
-{% endif %}
+        {% if latest_motorcycle_list %}
+            <ul>
+            {% for motorcycle in latest_motorcycle_list %}
+            <li><a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No motorcycle are available.</p>
+        {% endif %}
+    </main>
+</body>

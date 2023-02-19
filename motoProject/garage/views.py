@@ -18,7 +18,10 @@ def description(request, motorcycle_id):
 def create(request):    
     if request.method == "POST":
         form = CreateNewMotorcycle(request.POST)
-        
+        if form.is_valid():
+            moto = form.save(commit=False)
+            moto.save()
+        return render(request, 'garage/create.html', {'form': form})
     else:
         form = CreateNewMotorcycle()
     return render(request, 'garage/create.html', {'form': form})

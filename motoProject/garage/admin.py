@@ -10,5 +10,12 @@ class MotorcycleAdmin(admin.ModelAdmin):
         ('Date information', {'fields': ['pub_date']}),
     ]
 
-admin.site.register(Motorcycle, MotorcycleAdmin)
+class DescriptionAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['motorcycle']}),
+        ('Description', {'fields': ['description_text']}),
+        ('Likes', {'fields': ['likes']}),
+    ]
 
+admin.site.register(Motorcycle, MotorcycleAdmin)
+admin.site.register(Description, DescriptionAdmin)
