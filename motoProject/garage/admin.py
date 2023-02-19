@@ -2,20 +2,14 @@
 
 from django.contrib import admin
 
-from .models import Motorcycle, Description
+from .models import Motorcycle
 
 class MotorcycleAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['motorcycle_text']}),
+        ('Brand', {'fields': ['motorcycle_brand']}),
+        ('Description', {'fields': ['motorcycle_description']}),
         ('Date information', {'fields': ['pub_date']}),
     ]
 
-class DescriptionAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['motorcycle']}),
-        ('Description', {'fields': ['description_text']}),
-        ('Likes', {'fields': ['likes']}),
-    ]
-
 admin.site.register(Motorcycle, MotorcycleAdmin)
-admin.site.register(Description, DescriptionAdmin)

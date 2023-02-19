@@ -1,41 +1,54 @@
 .navbar{
-    height: 100%;
-    width: 160px;
+    height: 50px;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 20px;
+    display: flex;
+    justify-content: space-between; 
 }
 
 .navbar a {
-    padding: 6px 8px 6px 16px;
+    padding: 8px 6px 16px 6px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
-    display: block;
+    
 }
 
 .navbar a:hover {
     color: #f1f1f1;
 }
 
-.main {
+body{
     background: url("img/garage.jpg") no-repeat;
-    margin-left: 160px;
-    padding: 0px 10px;
+    background-size: 100%;
+    color: white;
+    padding-top: 25px;
+}
+
+.list {
+    padding-left: 0px;
+    padding-top: 50px;
+    font-size: 40px;
 }
 
 li a {
     color: orange;
 }
 
+li a:hover{
+    color: green;
+}
+
 h1{
     text-align: center;
     color: green;
     text-decoration: underline;
+    font-size: 64px;
 }
 
 ul {
