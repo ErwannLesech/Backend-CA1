@@ -8,6 +8,7 @@
     background-color: #111;
     overflow-x: hidden;
     display: flex;
+    align-items: center;
     justify-content: space-between; 
 }
 
@@ -31,7 +32,7 @@ body{
 }
 
 .list {
-    padding-left: 0px;
+    padding-left: 20px;
     padding-top: 50px;
     font-size: 40px;
 }
@@ -40,18 +41,43 @@ li a {
     color: orange;
 }
 
+a {
+    text-decoration: none;
+}
+
 li a:hover{
+    color: white;
+    scale : 1.5;
+    transition: 0.3s;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.edit a {
     color: green;
+}
+
+.delete a {
+    color: red;
+}
+
+.moto{
+    text-align: center;
 }
 
 h1{
     text-align: center;
-    color: green;
+    color: orange;
     text-decoration: underline;
     font-size: 64px;
 }
 
 ul {
     padding: 30px;
-    text-decoration: none;
+    
 }

@@ -2,6 +2,10 @@ from django.urls import path
 
 from . import views
 
+# This file defines the URLs for the garage app. It uses the path function from 
+# django.urls to map URLs to views. Each URL is associated with a specific 
+# view function from views.py, which handles the HTTP requests and responses.
+
 app_name = 'garage'
 urlpatterns = [
     # ex: /garage/

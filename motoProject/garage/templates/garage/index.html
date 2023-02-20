@@ -7,7 +7,6 @@
     <div class="navbar">
         <a href="/garage/">Home</a>
         <a href="/garage/create/">Add Motorcycle</a>
-        <!-- <a href="/garage/remove/">Remove Motorcycle</a> -->
     </div>
     <section class="list">
         <h1>Garage</h1>
@@ -16,15 +15,22 @@
             <ul>
             {% for motorcycle in latest_motorcycle_list %}
             <li>
-                <a href="{{ motorcycle.id }}/update/"> Edit </a>
-                <a href="{{ motorcycle.id }}/delete/"> Delete </a>
-                <a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
+                <div class="flex">
+                    <div class="edit">
+                        <a href="{{ motorcycle.id }}/update/"> Edit </a>
+                    </div>
+                    <div class="moto">
+                        <a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a>
+                    </div>
+                    <div class="delete">
+                        <a href="{{ motorcycle.id }}/delete/"> Delete </a>
+                    </div>
+                </div>
+                </li>
             {% endfor %}
             </ul>
         {% else %}
             <p>No motorcycle are available.</p>
         {% endif %}
-        <a href="/garage/create/" class="btn btn-primary">Add a new motorcycle</a>
-
     </section>
 </body>
