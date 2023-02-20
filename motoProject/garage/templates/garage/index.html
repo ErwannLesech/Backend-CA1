@@ -15,7 +15,10 @@
         {% if latest_motorcycle_list %}
             <ul>
             {% for motorcycle in latest_motorcycle_list %}
-            <li><a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
+            <li>
+                <a href="{{ motorcycle.id }}/update/"> Edit </a>
+                <a href="{{ motorcycle.id }}/delete/"> Delete </a>
+                <a href="/garage/{{ motorcycle.id }}/">{{ motorcycle.motorcycle_text }}</a></li>
             {% endfor %}
             </ul>
         {% else %}
